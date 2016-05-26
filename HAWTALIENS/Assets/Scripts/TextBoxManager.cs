@@ -34,11 +34,6 @@ public class TextBoxManager : MonoBehaviour {
 	void Update () 
 	{
 
-		if (isActive) 
-		{
-			return;
-		}
-
 		if(Input.GetKeyDown(KeyCode.Space)) 
 		{
 			currentLine += 1;

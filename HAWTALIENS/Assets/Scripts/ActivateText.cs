@@ -3,26 +3,29 @@ using System.Collections;
 
 public class ActivateText : MonoBehaviour {
 
+	public GameObject TextImporter;
 	public TextBoxManager textBox;
 	private bool waitforpress;
 
 	// Use this for initialization
 	void Start () 
 	{
-		textBox = FindObjectOfType<TextBoxManager> ();	
+			
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (waitforpress && Input.GetKeyDown (KeyCode.E)) 
+		if (waitforpress == true && Input.GetKeyDown (KeyCode.E)) 
 		{
+			TextImporter.SetActive (true);
+			textBox = FindObjectOfType<TextBoxManager> ();
 			Debug.Log ("you definitely fired the script"); 
 			textBox.loadConversation ();
 			textBox.EnableTextBox ();
 		}
 	}
 
-	void onCollisionEnter2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D other)
 	{
 		Debug.Log ("You're in there");
 		if (other.gameObject.tag == "Darrell") 
@@ -31,10 +34,11 @@ public class ActivateText : MonoBehaviour {
 		} 
 	}
 
-	void onTriggerExit2D(Collider2D other)
+	void OnTriggerExit2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Darrell") 
 		{
+			Debug.Log ("You're out of there");
 			waitforpress = false;
 		} 
 	}
