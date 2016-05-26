@@ -9,17 +9,24 @@ public class Movement : MonoBehaviour {
 	private Rigidbody2D myRigidbody;
 
 	private bool playerMoving;
-	private Vector2 lastMove;
+	public Vector2 lastMove;
+	public bool canMove;
 
 
 	void Start () {
 		anim = GetComponent<Animator> ();
 		myRigidbody = GetComponent<Rigidbody2D> ();
+		playerMoving = true;
 	}
 
 	void Update () {
 
 		playerMoving = false;
+		if (canMove == false) {
+			movespeed = 0;
+		} else {
+			movespeed = 8;
+		}
 
 		if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f) {
 			playerMoving = true;
@@ -41,7 +48,7 @@ public class Movement : MonoBehaviour {
 		}
 
 		anim.SetFloat ("MoveX", Input.GetAxisRaw ("Horizontal"));
-		anim.SetFloat ("MoveX", Input.GetAxisRaw ("Vertical"));
+		anim.SetFloat ("MoveY", Input.GetAxisRaw ("Vertical"));
 		anim.SetBool("PlayerMoving", playerMoving);
 		anim.SetFloat("LastMoveX", lastMove.x);
 		anim.SetFloat("LastMoveY", lastMove.y);

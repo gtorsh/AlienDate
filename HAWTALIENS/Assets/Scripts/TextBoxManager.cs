@@ -20,12 +20,64 @@ public class TextBoxManager : MonoBehaviour {
 
 	public Movement player;
 
-		// Use this for initialization
-	void Start () {
-		currentLine = 0;
-		player = FindObjectOfType<Movement> ();
+	public bool isActive;
 
-		if (Character == null && Conversation == null) {
+		// Use this for initialization
+	void Start () 
+	{
+		player = FindObjectOfType<Movement> ();
+		loadConversation();
+	}
+
+
+	// Update is called once per frame
+	void Update () 
+	{
+
+		if (isActive) 
+		{
+			return;
+		}
+
+		if(Input.GetKeyDown(KeyCode.Space)) 
+		{
+			currentLine += 1;
+		}
+
+		if (currentLine <= endAtLine) 
+		{
+			theText.text = textLines [currentLine];
+		} else {
+			DisableTextBox ();
+		}
+	}
+
+	public void EnableTextBox() 
+	{
+		textBox.SetActive (true);
+		player.canMove = false;
+		isActive = true;
+	}
+
+	public void DisableTextBox() 
+	{
+		textBox.SetActive (false);
+		player.canMove = true;
+		isActive = false;
+	}
+
+	public void ReloadScript(TextAsset theText) 
+	{
+		if (theText !=null) 
+		{
+			textLines = new string[1];
+		}
+	}
+
+	public void loadConversation()
+	{
+		if (Character == null && Conversation == null) 
+		{
 			TextAsset BaseCamp = (TextAsset)AssetDatabase.LoadAssetAtPath ("Assets/Data/BaseCamp.txt", typeof(TextAsset));  
 			textLines = (BaseCamp.text.Split ('\n')); 
 		} else {
@@ -39,26 +91,8 @@ public class TextBoxManager : MonoBehaviour {
 			TextAsset goodText = (TextAsset)AssetDatabase.LoadAssetAtPath (myFile, typeof(TextAsset));  
 			textLines = (goodText.text.Split ('\n')); 
 		}
-		if (endAtLine == 0) {
-			endAtLine = textLines.Length - 1;
-		}
+		currentLine = 0;
+		endAtLine = textLines.Length - 1;
 	}
-
-
-	// Update is called once per frame
-	void Update () {
-
-		if(Input.GetKeyDown(KeyCode.Space)) {
-			currentLine += 1;
-		}
-
-		if (currentLine <= endAtLine) {
-			theText.text = textLines [currentLine];
-		} else {
-			textBox.SetActive(false);
-			theText.text = null;
-		}
-	}
-
 }
 		
