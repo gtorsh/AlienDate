@@ -1,5 +1,5 @@
 OMG
 This Is Text
-
+<end>
 WOOHOO
 This is the End

@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 using UnityEditor;
 using UnityEngine.UI;
 using System.IO;
+using System;
 
 public class TextBoxManager : MonoBehaviour {
 
@@ -37,15 +39,18 @@ public class TextBoxManager : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Space)) 
 		{
 			currentLine += 1;
+            if (textLines[currentLine].Contains("<end>"))
+            {
+                DisableTextBox();
+            }
 		}
-
-		if (currentLine <= endAtLine) 
+        if (currentLine <= endAtLine) 
 		{
 			theText.text = textLines [currentLine];
 		} else {
 			DisableTextBox ();
 		}
-	}
+    }
 
 	public void EnableTextBox() 
 	{
