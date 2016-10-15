@@ -1,0 +1,34 @@
+<dialogue>
+	<dialogueEntry ID="1">
+		<actor>deborah</actor>
+		<text>
+			AAAAAAAH!
+		</text>
+		<options/>
+		<outgoing ID="2">
+	</dialogueEntry>
+	<dialogueEntry ID="2">
+		<actor>darrell</actor>
+		<text>
+			AAAAAAAAAAAAAH!
+		</text>
+		<options/>
+		<outgoing ID="3">
+	</dialogueEntry>
+	<dialogueEntry ID="3">
+		<actor>deborah</actor>
+		<text>
+			AAAAAAAAAAAAAAAAAAAAAAAAAH!
+		</text>
+		<options/>
+		<outgoing ID="4">
+	</dialogueEntry>
+	<dialogueEntry ID="4">
+		<actor>darrell</actor>
+		<text>
+			Ah!
+		</text>
+		<options/>
+		<outgoing/>
+	</dialogueEntry>
+</dialogue>
