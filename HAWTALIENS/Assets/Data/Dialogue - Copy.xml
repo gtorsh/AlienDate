@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<DIALOGUE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <dContainer char="Deborah">
+    <dPack ID="1">
+      <dEntry ID="1">
+        <actor>Deborah</actor>
+        <text>AAAAAAAH!</text>
+      </dEntry>
+      <dEntry ID="2">
+        <actor>Darrell</actor>
+        <text>AAAAAAAAAAAAAH!</text>
+      </dEntry>
+      <dEntry ID="3">
+        <actor>Deborah</actor>
+        <text>AAAAAAAAAAAAAAAAAAAAAAAAAH!</text>
+      </dEntry>
+      <dEntry ID="4">
+        <actor>Darrell</actor>
+        <text>Ah!</text>
+      </dEntry>
+    </dPack>
+    <dPack ID="2" />
+  </dContainer>
+  <dContainer char="orbos" />
+</DIALOGUE>

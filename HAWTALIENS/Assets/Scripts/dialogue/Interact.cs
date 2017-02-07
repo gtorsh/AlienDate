@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ActivateText : MonoBehaviour {
+public class Interact : MonoBehaviour {
 
 	public GameObject TextImporter;
 	public TextBoxManager textBox;
-	private bool waitforpress;
+	public bool waitforpress;
+    public bool popupTrue;
 
 	// Use this for initialization
 	void Start () 
 	{
-			
+        //diaControl.Save("Assets/Data/Dialogue.xml");
 	}
 	
 	// Update is called once per frame
@@ -19,18 +20,17 @@ public class ActivateText : MonoBehaviour {
 		{
 			TextImporter.SetActive (true);
 			textBox = FindObjectOfType<TextBoxManager> ();
-			Debug.Log ("you definitely fired the script"); 
-			textBox.loadConversation ();
-			textBox.EnableTextBox ();
+            textBox.Character = gameObject.name;
+            textBox.EnableTextBox ();
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		Debug.Log ("You're in there");
 		if (other.gameObject.tag == "Darrell") 
 		{
-			waitforpress = true;
+            waitforpress = true;
+            popupTrue = true;
 		} 
 	}
 
@@ -38,8 +38,8 @@ public class ActivateText : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Darrell") 
 		{
-			Debug.Log ("You're out of there");
 			waitforpress = false;
+            popupTrue = false;
 		} 
 	}
 }

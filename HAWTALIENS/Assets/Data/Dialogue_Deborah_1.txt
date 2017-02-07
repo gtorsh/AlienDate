@@ -1,5 +1,2 @@
-OMG
-This Is Text
+Boopadoop
 <end>
-WOOHOO
-This is the End

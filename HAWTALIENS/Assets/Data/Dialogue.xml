@@ -1,34 +1,44 @@
-<dialogue>
-	<dialogueEntry ID="1">
-		<actor>deborah</actor>
-		<text>
-			AAAAAAAH!
-		</text>
-		<options/>
-		<outgoing ID="2">
-	</dialogueEntry>
-	<dialogueEntry ID="2">
-		<actor>darrell</actor>
-		<text>
-			AAAAAAAAAAAAAH!
-		</text>
-		<options/>
-		<outgoing ID="3">
-	</dialogueEntry>
-	<dialogueEntry ID="3">
-		<actor>deborah</actor>
-		<text>
-			AAAAAAAAAAAAAAAAAAAAAAAAAH!
-		</text>
-		<options/>
-		<outgoing ID="4">
-	</dialogueEntry>
-	<dialogueEntry ID="4">
-		<actor>darrell</actor>
-		<text>
-			Ah!
-		</text>
-		<options/>
-		<outgoing/>
-	</dialogueEntry>
-</dialogue>
+<?xml version="1.0" encoding="Windows-1252"?>
+<DIALOGUE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <dContainer char="Deborah">
+    <dPack ID="1">
+      <dEntry ID="1">
+        <actor>Deborah</actor>
+        <text>AAAAAAAH! An Alien!</text>
+      </dEntry>
+      <dEntry ID="2">
+        <actor>Darrell</actor>
+        <text>AAAAAAAAAAAAAH! An Alien!!!</text>
+      </dEntry>
+      <dEntry ID="3">
+        <actor>Deborah</actor>
+        <text>AAAAAAAAAAAAAA~~~Ah? You can Talk?</text>
+      </dEntry>
+      <dEntry ID="4">
+        <actor>Darrell</actor>
+        <text>Aw Fuck Ya Bud!</text>
+      </dEntry>
+    </dPack>
+    <dPack ID="2" />
+  </dContainer>
+  <dContainer char="orbos">
+    <dPack ID="1">
+      <dEntry ID="1">
+        <actor>Orbos</actor>
+        <text>***BEEEP BOOP***</text>
+      </dEntry>
+      <dEntry ID="2">
+        <actor>Darrell</actor>
+        <text>Okay?</text>
+      </dEntry>
+      <dEntry ID="3">
+        <actor>Orbos</actor>
+        <text>Sorry, just parsing your past, present, and future. What can I do for you?</text>
+      </dEntry>
+      <dEntry ID="4">
+        <actor>Darrell</actor>
+        <text>Ima leave now...</text>
+      </dEntry>
+    </dPack>
+  </dContainer>
+</DIALOGUE>
