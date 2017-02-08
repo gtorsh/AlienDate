@@ -10,11 +10,8 @@ public class dEntry
     [XmlAttribute("ID")]
     public int dID;
 
-    [XmlElement("actor")]
-    public string actor;
-
-    [XmlElement("text")]
-    public string dText;
+    [XmlElement("textFrag")]
+    public List<textFrag> textFrag;
 
     [XmlElement("dChoice")]
     public List<dChoice> choices;

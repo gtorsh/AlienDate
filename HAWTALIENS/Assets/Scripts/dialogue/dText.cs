@@ -5,11 +5,8 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
 
-public class dChoice
+public class dText
 {
-    [XmlElement("text")]
-    public string text;
-
-    [XmlElement("dest")]
-    public int dest;
+    [XmlAttribute("actor")]
+    public string actor;
 }

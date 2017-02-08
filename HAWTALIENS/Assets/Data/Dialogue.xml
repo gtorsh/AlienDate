@@ -1,44 +1,60 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <DIALOGUE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <dContainer char="Deborah">
-    <dPack ID="1">
-      <dEntry ID="1">
-        <actor>Deborah</actor>
-        <text>AAAAAAAH! An Alien!</text>
-      </dEntry>
-      <dEntry ID="2">
-        <actor>Darrell</actor>
-        <text>AAAAAAAAAAAAAH! An Alien!!!</text>
-      </dEntry>
-      <dEntry ID="3">
-        <actor>Deborah</actor>
-        <text>AAAAAAAAAAAAAA~~~Ah? You can Talk?</text>
-      </dEntry>
-      <dEntry ID="4">
-        <actor>Darrell</actor>
-        <text>Aw Fuck Ya Bud!</text>
-      </dEntry>
-    </dPack>
-    <dPack ID="2" />
-  </dContainer>
-  <dContainer char="orbos">
-    <dPack ID="1">
-      <dEntry ID="1">
-        <actor>Orbos</actor>
-        <text>***BEEEP BOOP***</text>
-      </dEntry>
-      <dEntry ID="2">
-        <actor>Darrell</actor>
-        <text>Okay?</text>
-      </dEntry>
-      <dEntry ID="3">
-        <actor>Orbos</actor>
-        <text>Sorry, just parsing your past, present, and future. What can I do for you?</text>
-      </dEntry>
-      <dEntry ID="4">
-        <actor>Darrell</actor>
-        <text>Ima leave now...</text>
-      </dEntry>
-    </dPack>
-  </dContainer>
+	<dContainer char="Deborah">
+		<dPack ID="0" Name="deb_Temp">
+			<dEntry ID="0" Name="deb_Intro">
+				<textFrag>
+					<text>AAAAAAAH! An Alien!</text>
+					<actor>Deborah</actor>
+				</textFrag>
+				<textFrag>
+					<text>AAAAAH! AN ALIEEEEN!</text>
+					<actor>Darrell</actor>
+				</textFrag>	
+				<textFrag>
+					<text>...You can talk?</text>
+					<actor>Deborah</actor>
+				</textFrag>
+				<dChoice>
+					<text>Aw Fuck Yeah Bud</text>
+					<dest>1</dest>
+				</dChoice>
+				<dChoice>
+					<text>Dur?</text>
+					<dest>2</dest>
+				</dChoice>
+				<dChoice>
+					<text>Die alien scum!!!</text>
+					<dest>3</dest>
+				</dChoice>
+				<dChoice>
+					<text>Leave</text>
+					<dest>-1</dest>
+				</dChoice>
+			</dEntry>
+		</dPack>
+		<dPack ID="1" />
+	</dContainer>
+	<dContainer char="orbos">
+		<dPack ID="0" Name="orb_Temp">
+			<dEntry ID="0" Name="orb_Intro">
+				<textFrag>
+					<text>***BEEEP BOOP***</text>
+					<actor>Orbos</actor>
+				</textFrag>
+				<textFrag>
+					<text>Uhh....</text>
+					<actor>Darrell</actor>
+				</textFrag>
+				<textFrag>
+					<text>...Sorry to keep you waiting. I was just parsing your past, present, and future. I tend to do that when I meet people. How are you Darrell?</text>
+					<actor>Orbos</actor>
+				</textFrag>
+				<textFrag>
+					<text>...You know my name... I'm going to leave.... bye.</text>
+					<actor>Darrell</actor>
+				</textFrag>
+			</dEntry>
+		</dPack>
+	</dContainer>
 </DIALOGUE>
