@@ -16,12 +16,19 @@ public class Interact : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (waitforpress == true && Input.GetKeyDown (KeyCode.E)) 
+		if (waitforpress == true && Input.GetButtonDown("Green")) 
 		{
 			TextImporter.SetActive (true);
 			textBox = FindObjectOfType<TextBoxManager> ();
             textBox.Character = gameObject.name;
-            textBox.EnableTextBox ();
+            if (textBox.isActive == false)
+            {
+                if (textBox.Conversation != 0)
+                {
+                    textBox.Conversation = 0;
+                }
+                textBox.EnableTextBox();
+            }
 		}
 	}
 

@@ -2,7 +2,7 @@
 <DIALOGUE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<dContainer char="Deborah">
 		<dPack ID="0" Name="deb_Temp">
-			<dEntry ID="0" Name="deb_Intro">
+			<dEntry ID="0" Name="deb_Intro_1">
 				<textFrag>
 					<text>AAAAAAAH! An Alien!</text>
 					<actor>Deborah</actor>
@@ -27,13 +27,43 @@
 					<text>Die alien scum!!!</text>
 					<dest>3</dest>
 				</dChoice>
-				<dChoice>
-					<text>Leave</text>
-					<dest>-1</dest>
-				</dChoice>
+        <dChoice>
+          <text>~~Leave... Quickly~~</text>
+          <dest>-1</dest>
+        </dChoice>
 			</dEntry>
+      <dEntry ID="1" Name="deb_Intro_2">
+        <textFrag>
+          <text>Coolio! I've never met a lab project that could talk.</text>
+          <actor>Deborah</actor>
+        </textFrag>
+        <textFrag>
+          <text>Hooooey! Well, I talk lots, but I've never really been much fer science!</text>
+          <actor>Darrell</actor>
+        </textFrag>
+      </dEntry>
+      <dEntry ID="2" Name="deb_Intro_3">
+        <textFrag>
+          <text>..!.. Oh... That's what I thought... too bad.</text>
+          <actor>Deborah</actor>
+        </textFrag>
+        <textFrag>
+          <text>--(Man, good thing I played the stupid Hick, She almost though I was Intelligent)--</text>
+          <actor>Darrell</actor>
+        </textFrag>
+      </dEntry>
+      <dEntry ID="3" Name="deb_Intro_4">
+        <textFrag>
+          <text>Ooooh Nooo! What am I ever going to do?! I'm so scared of this defenseless, half naked, hick!</text>
+          <actor>Deborah</actor>
+        </textFrag>
+        <textFrag>
+          <text>...When you put it that way it kind of hurts...</text>
+          <actor>Darrell</actor>
+        </textFrag>
+      </dEntry>
 		</dPack>
-		<dPack ID="1" />
+    <dPack ID="1" />
 	</dContainer>
 	<dContainer char="orbos">
 		<dPack ID="0" Name="orb_Temp">
