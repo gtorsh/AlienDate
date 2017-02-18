@@ -17,7 +17,7 @@ public class Interact : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (waitforpress == true && Input.GetButtonDown("Green"))
+        if (waitforpress == true && Input.GetButtonDown(Global.green))
         {
             switch (Global.playerState)
             {

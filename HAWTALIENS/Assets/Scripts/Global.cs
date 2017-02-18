@@ -17,10 +17,11 @@ public class Global : MonoBehaviour {
 
     public static pState playerState;
 
-    public string green;
-    public string red;
-    public string blue;
-    public string yellow;
+    public static string green;
+    public static string red;
+    public static string blue;
+    public static string yellow;
+    public static string start;
 
     // Use this for initialization
     void Start () {
@@ -39,22 +40,26 @@ public class Global : MonoBehaviour {
                     red = "PCred";
                     blue = "PCblue";
                     yellow = "PCyellow";
+                    start = "PCstart";
                 } else
                 {
                     green = "Kgreen";
                     red = "Kred";
                     blue = "Kblue";
                     yellow = "Kyellow";
+                    start = "Kstart";
                 }
                 break;
             case RuntimePlatform.OSXPlayer:
             case RuntimePlatform.OSXEditor:
-                if (Input.GetJoystickNames()[0] != "")
+                print(Input.GetJoystickNames().Length);
+                if (Input.GetJoystickNames().Length != 0)
                 {
                     green = "OSXgreen";
                     red = "OSXred";
                     blue = "OSXblue";
                     yellow = "OSXyellow";
+                    start = "OSXstart";
                 }
                 else
                 {
@@ -62,6 +67,7 @@ public class Global : MonoBehaviour {
                     red = "Kred";
                     blue = "Kblue";
                     yellow = "Kyellow";
+                    start = "Kstart";
                 }
                 break;
             default:

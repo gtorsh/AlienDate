@@ -66,7 +66,7 @@ public class TextBoxManager : MonoBehaviour {
                     firstPass = false;
                     return;
                 }
-                if (Input.GetButtonDown("Green"))
+                if (Input.GetButtonDown(Global.green))
                 {
                     if (currentLine == endAtLine && !isWaiting && hasChoices == 0)
                     {
@@ -95,13 +95,13 @@ public class TextBoxManager : MonoBehaviour {
                 }
                 break;
             case true:
-                if (Input.GetButtonDown("Green"))
+                if (Input.GetButtonDown(Global.green))
                 {
                     Conversation = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].choices[0].dest;
                     DisableChoices();
                     loadConversation(Character);
                 }
-                else if (Input.GetButtonDown("Red"))
+                else if (Input.GetButtonDown(Global.red))
                 {
                     if (!rChoice.activeSelf)
                     {
@@ -111,7 +111,7 @@ public class TextBoxManager : MonoBehaviour {
                     DisableChoices();
                     loadConversation(Character);
                 }
-                else if (Input.GetButtonDown("Blue"))
+                else if (Input.GetButtonDown(Global.blue))
                 {
                     if (!bChoice.activeSelf)
                     {
@@ -121,7 +121,7 @@ public class TextBoxManager : MonoBehaviour {
                     DisableChoices();
                     loadConversation(Character);
                 }
-                else if (Input.GetButtonDown("Yellow"))
+                else if (Input.GetButtonDown(Global.yellow))
                 {
                     if (!yChoice.activeSelf)
                     {

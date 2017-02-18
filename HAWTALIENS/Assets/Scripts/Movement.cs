@@ -28,7 +28,7 @@ public class Movement : MonoBehaviour {
         {
             case (Global.pState.WALK):
                 ///-------------------------------------Gets Inputs-------------------------------------///
-                if (Input.GetButtonDown("Start"))
+                if (Input.GetButtonDown(Global.start))
                 {
                     pause();
                 }
@@ -72,13 +72,13 @@ public class Movement : MonoBehaviour {
                 anim.SetFloat("LastMoveY", lastMove.y);
                 break;
             case (Global.pState.TALK):
-                if (Input.GetButtonDown("Start"))
+                if (Input.GetButtonDown(Global.start))
                 {
                     pause();
                 }
                 break;
             case (Global.pState.PAUSED):
-                if (Input.GetButtonDown("Start"))
+                if (Input.GetButtonDown(Global.start))
                 {
                     Time.timeScale = 1;
                     pMenu.SetActive(false);
