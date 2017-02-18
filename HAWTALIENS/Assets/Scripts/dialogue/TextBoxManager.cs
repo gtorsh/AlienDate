@@ -54,6 +54,10 @@ public class TextBoxManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+        if (Global.playerState != Global.pState.TALK)
+        {
+            return;
+        }
         switch (showChoices)
         {
             case false:
@@ -143,7 +147,8 @@ public class TextBoxManager : MonoBehaviour {
 
 	public void DisableTextBox() 
 	{
-		textBox.SetActive (false);
+        Global.playerState = Global.pState.WALK;
+        textBox.SetActive (false);
 		player.canMove = true;
 		isActive = false;
         theText.text = "";

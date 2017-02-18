@@ -7,29 +7,29 @@ public class Interact : MonoBehaviour {
 	public TextBoxManager textBox;
 	public bool waitforpress;
     public bool popupTrue;
+    private string tpState;
 
 	// Use this for initialization
 	void Start () 
 	{
         //diaControl.Save("Assets/Data/Dialogue.xml");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (waitforpress == true && Input.GetButtonDown("Green")) 
-		{
-			TextImporter.SetActive (true);
-			textBox = FindObjectOfType<TextBoxManager> ();
-            textBox.Character = gameObject.name;
-            if (textBox.isActive == false)
+
+    // Update is called once per frame
+    void Update() {
+        if (waitforpress == true && Input.GetButtonDown("Green"))
+        {
+            switch (Global.playerState)
             {
-                if (textBox.Conversation != 0)
-                {
-                    textBox.Conversation = 0;
-                }
-                textBox.EnableTextBox();
+                case (Global.pState.WALK):
+                    talk();
+                    break;
+                case (Global.pState.TALK):
+                    break;
+                case (Global.pState.PAUSED):
+                    break;
             }
-		}
+        }
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -49,5 +49,24 @@ public class Interact : MonoBehaviour {
             popupTrue = false;
 		} 
 	}
+
+    public void talk()
+    {
+        if (waitforpress == true)
+        {
+            Global.playerState = Global.pState.TALK;
+            TextImporter.SetActive(true);
+            textBox = FindObjectOfType<TextBoxManager>();
+            textBox.Character = gameObject.name;
+            if (textBox.isActive == false)
+            {
+                if (textBox.Conversation != 0)
+                {
+                    textBox.Conversation = 0;
+                }
+                textBox.EnableTextBox();
+            }
+        }
+    }
 }
 	 
