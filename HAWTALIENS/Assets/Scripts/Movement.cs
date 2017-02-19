@@ -84,6 +84,15 @@ public class Movement : MonoBehaviour {
                     pMenu.SetActive(false);
                     canMove = true;
                     Global.playerState = tpState;
+                } else if (Input.GetButtonDown(Global.green))
+                {
+                    print("You Saved!!!");
+                    Global.progControl.Save();
+                }
+                else if (Input.GetButtonDown(Global.red))
+                {
+                    print("You Loaded!!!");
+                    Global.progControl = progControl.Load("Assets/Data/baseSaveFile.xml");
                 }
                 break;
         }

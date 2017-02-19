@@ -15,4 +15,7 @@ public class dEntry
 
     [XmlElement("dChoice")]
     public List<dChoice> choices;
+
+    [XmlElement("dest")]
+    public int dest;
 }

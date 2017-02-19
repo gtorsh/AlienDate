@@ -44,10 +44,10 @@ public class TextBoxManager : MonoBehaviour {
 	void Start () 
 	{
 		player = FindObjectOfType<Movement> ();
-        if (Conversation != 0)
-        {
-            Conversation = 0;
-        }
+        ///if (Conversation != 0)
+        ///{
+        ///    Conversation = 0;
+        ///}
 	}
 
 
@@ -70,7 +70,15 @@ public class TextBoxManager : MonoBehaviour {
                 {
                     if (currentLine == endAtLine && !isWaiting && hasChoices == 0)
                     {
-                        DisableTextBox();
+                        if (Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].dest != 0)
+                        {
+                            Conversation = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].dest;
+                            loadConversation(Character);
+                        }
+                        else
+                        {
+                            DisableTextBox();
+                        }
                     }
                     else if (currentLine == endAtLine && !isWaiting && hasChoices != 0)
                     {
@@ -138,7 +146,22 @@ public class TextBoxManager : MonoBehaviour {
 
 	public void EnableTextBox() 
 	{
-		textBox.SetActive (true);
+        var chara = Character.ToUpper();
+        tChar = -1;
+        switch (chara)
+        {
+            case "DEBORAH":
+                tChar = 0;
+                break;
+            case "ORBOS":
+                tChar = 1;
+                break;
+            default:
+                break;
+        }
+        arc = Global.progControl.character[tChar].arc;
+        Conversation = Global.progControl.character[tChar].conversation;
+        textBox.SetActive (true);
         firstPass = true;
         player.canMove = false;
 		isActive = true;
@@ -147,6 +170,14 @@ public class TextBoxManager : MonoBehaviour {
 
 	public void DisableTextBox() 
 	{
+        if (Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].dest != 0)
+        {
+            Global.progControl.character[tChar].conversation = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].dest;
+        } else
+        {
+            Global.progControl.character[tChar].conversation = Conversation;
+        }
+        print(Global.progControl.character[tChar].conversation);
         Global.playerState = Global.pState.WALK;
         textBox.SetActive (false);
 		player.canMove = true;
@@ -221,19 +252,6 @@ public class TextBoxManager : MonoBehaviour {
             DisableChoices();
             DisableTextBox();
             return;
-        }
-        var chara = character.ToUpper();
-        tChar = -1;
-        switch (chara)
-        {
-            case "DEBORAH":
-                tChar = 0;
-                break;
-            case "ORBOS":
-                tChar = 1;
-                break;
-            default:
-                break;
         }
         endAtLine = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag.Count - 1;
         currentLine = 0;

@@ -4,9 +4,11 @@ using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public class Global : MonoBehaviour {
+public class Global : MonoBehaviour
+{
 
     public static DialogueContainer diaControl;
+    public static progControl progControl;
 
     public enum pState
     {
@@ -24,7 +26,8 @@ public class Global : MonoBehaviour {
     public static string start;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         ///=================================================///
         ///------------------Input from OS------------------///
         ///=================================================///
@@ -41,7 +44,8 @@ public class Global : MonoBehaviour {
                     blue = "PCblue";
                     yellow = "PCyellow";
                     start = "PCstart";
-                } else
+                }
+                else
                 {
                     green = "Kgreen";
                     red = "Kred";
@@ -80,21 +84,17 @@ public class Global : MonoBehaviour {
         print(yellow);
 
         diaControl = DialogueContainer.Load("Assets/Data/Dialogue.xml");
+        if (File.Exists(Application.dataPath + "/Saves/saveFile.xml"))
+        {
+            progControl = progControl.Load(Application.dataPath + "/Saves/saveFile.xml");
+        } else
+        {
+            progControl = progControl.Load("Assets/Data/baseSaveFile.xml");
+            progControl.Save();
+        }
         playerState = pState.WALK;
     }
 
     // Update is called once per frame
-    void Update () {
-		
-	}
-
-    public void SaveData()
-    {
-        if (!Directory.Exists("Saves"))
-            Directory.CreateDirectory("Saves");
-
-        BinaryFormatter formatter = new BinaryFormatter();
-        FileStream saveFile = File.Create("Saves/save.binary");
-        var LocalCopyOfData = 0;
-    }
+    void Update() { }
 }

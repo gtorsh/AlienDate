@@ -40,6 +40,7 @@
         <textFrag>
           <text>Hooooey! Well, I talk lots, but I've never really been much fer science!</text>
           <actor>Darrell</actor>
+          <dest>4</dest>
         </textFrag>
       </dEntry>
       <dEntry ID="2" Name="deb_Intro_3">
@@ -50,6 +51,7 @@
         <textFrag>
           <text>--(Man, good thing I played the stupid Hick, She almost though I was Intelligent)--</text>
           <actor>Darrell</actor>
+          <dest>4</dest>
         </textFrag>
       </dEntry>
       <dEntry ID="3" Name="deb_Intro_4">
@@ -60,6 +62,13 @@
         <textFrag>
           <text>...When you put it that way it kind of hurts...</text>
           <actor>Darrell</actor>
+          <dest>4</dest>
+        </textFrag>
+      </dEntry>
+      <dEntry ID="4" Name="deb_Intro_5">
+        <textFrag>
+          <text>I have nothing else to say so far... though I should keep saying this regardless of what you do.</text>
+          <actor>Deborah</actor>
         </textFrag>
       </dEntry>
 		</dPack>
