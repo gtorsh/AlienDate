@@ -36,9 +36,13 @@ public class TextBoxManager : MonoBehaviour {
     private bool firstPass;
     private int hasChoices = 0;
     private bool showChoices = false;
+    private string fChar;
+    private string fType;
+    private int fID;
+    private int fVal;
 
-		// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start () 
 	{
 		player = FindObjectOfType<Movement> ();
         ///if (Conversation != 0)
@@ -65,6 +69,10 @@ public class TextBoxManager : MonoBehaviour {
                 }
                 if (Input.GetButtonDown(Global.green))
                 {
+                    if (Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].flag.Count != 0)
+                    {
+                        setFlag();
+                    }
                     if (currentLine == endAtLine && !isWaiting && hasChoices == 0)
                     {
                         if (Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].dest != 0)
@@ -267,6 +275,30 @@ public class TextBoxManager : MonoBehaviour {
                 //    SoundManager.instance.RandomizeSfx(typeSound1, typeSound2);
                 yield return 0;
                 yield return new WaitForSeconds(letterPause);
+            }
+        }
+    }
+
+    public void setFlag()
+    {
+        for (int i = 0; i < Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].flag.Count; i++)
+        {
+            fChar = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].flag[i].character;
+            fType = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].flag[i].type;
+            fID = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].flag[i].ID;
+            fVal = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].flag[i].value;
+
+            switch (fType)
+            {
+                case "conversation":
+                    fChar = fChar.ToUpper();
+                    Global.progControl.character[enu.CHAR(fChar)].conversation = fVal; 
+                    break;
+                case "flag":
+                    break;
+                default:
+                    print("The Flag didn't work");
+                    break;
             }
         }
     }

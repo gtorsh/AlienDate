@@ -71,6 +71,9 @@ public class textFrag
 
     [XmlElement("dest")]
     public int dest;
+
+    [XmlElement("flag")]
+    public List<dFlag> flag;
 }
 
 public class dChoice
@@ -82,4 +85,17 @@ public class dChoice
     public int dest;
 }
 
+public class dFlag
+{
+    [XmlAttribute("CHAR")]
+    public string character;
 
+    [XmlAttribute("ID")]
+    public int ID;
+
+    [XmlAttribute("TYPE")]
+    public string type;
+
+    [XmlAttribute("VAL")]
+    public int value;
+}

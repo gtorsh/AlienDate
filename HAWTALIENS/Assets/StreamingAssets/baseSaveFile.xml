@@ -8,4 +8,7 @@
 		<arc>0</arc>
 		<conversation>0</conversation>
 	</character>
+	<flags>
+		<flag numID="0" ID="deborah_flag_0" VAL="0"/>
+	</flags>
 </Save>

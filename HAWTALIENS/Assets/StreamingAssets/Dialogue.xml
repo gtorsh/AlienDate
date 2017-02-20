@@ -27,52 +27,53 @@
 					<text>Die alien scum!!!</text>
 					<dest>3</dest>
 				</dChoice>
-        <dChoice>
-          <text>~~Leave... Quickly~~</text>
-          <dest>-1</dest>
-        </dChoice>
+				<dChoice>
+					<text>~~Leave... Quickly~~</text>
+					<dest>-1</dest>
+				</dChoice>
 			</dEntry>
-      <dEntry ID="1" Name="deb_Intro_2">
-        <textFrag>
-          <text>Coolio! I've never met a lab project that could talk.</text>
-          <actor>Deborah</actor>
-        </textFrag>
-        <textFrag>
-          <text>Hooooey! Well, I talk lots, but I've never really been much fer science!</text>
-          <actor>Darrell</actor>
-          <dest>4</dest>
-        </textFrag>
-      </dEntry>
-      <dEntry ID="2" Name="deb_Intro_3">
-        <textFrag>
-          <text>..!.. Oh... That's what I thought... too bad.</text>
-          <actor>Deborah</actor>
-        </textFrag>
-        <textFrag>
-          <text>--(Man, good thing I played the stupid Hick, She almost though I was Intelligent)--</text>
-          <actor>Darrell</actor>
-          <dest>4</dest>
-        </textFrag>
-      </dEntry>
-      <dEntry ID="3" Name="deb_Intro_4">
-        <textFrag>
-          <text>Ooooh Nooo! What am I ever going to do?! I'm so scared of this defenseless, half naked, hick!</text>
-          <actor>Deborah</actor>
-        </textFrag>
-        <textFrag>
-          <text>...When you put it that way it kind of hurts...</text>
-          <actor>Darrell</actor>
-          <dest>4</dest>
-        </textFrag>
-      </dEntry>
-      <dEntry ID="4" Name="deb_Intro_5">
-        <textFrag>
-          <text>I have nothing else to say so far... though I should keep saying this regardless of what you do.</text>
-          <actor>Deborah</actor>
-        </textFrag>
-      </dEntry>
+			<dEntry ID="1" Name="deb_Intro_2">
+				<textFrag>
+					<text>Coolio! I've never met a lab project that could talk.</text>
+					<actor>Deborah</actor>
+				</textFrag>
+				<textFrag>
+					<text>Hooooey! Well, I talk lots, but I've never really been much fer science!</text>
+					<actor>Darrell</actor>
+					<dest>4</dest>
+				</textFrag>
+			</dEntry>
+			<dEntry ID="2" Name="deb_Intro_3">
+				<textFrag>
+					<text>..!.. Oh... That's what I thought... too bad.</text>
+					<actor>Deborah</actor>
+				</textFrag>
+				<textFrag>
+					<text>--(Man, good thing I played the stupid Hick, She almost though I was Intelligent)--</text>
+					<actor>Darrell</actor>
+					<dest>4</dest>
+				</textFrag>
+			</dEntry>
+			<dEntry ID="3" Name="deb_Intro_4">
+				<textFrag>
+					<text>Ooooh Nooo! What am I ever going to do?! I'm so scared of this defenseless, half naked, hick!</text>
+					<actor>Deborah</actor>
+				</textFrag>
+				<textFrag>
+					<text>...When you put it that way it kind of hurts...</text>
+					<actor>Darrell</actor>
+					<dest>4</dest>
+				</textFrag>
+			</dEntry>
+			<dEntry ID="4" Name="deb_Intro_5">
+				<textFrag>
+					<text>Go Talk to Orbos Now... She should have some new text!</text>
+					<actor>Deborah</actor>
+					<flag CHAR="orbos" ID="1" TYPE="conversation" VAL="1"/>
+				</textFrag>
+			</dEntry>
 		</dPack>
-    <dPack ID="1" />
+		<dPack ID="1" />
 	</dContainer>
 	<dContainer char="orbos">
 		<dPack ID="0" Name="orb_Temp">
@@ -92,6 +93,16 @@
 				<textFrag>
 					<text>...You know my name... I'm going to leave.... bye.</text>
 					<actor>Darrell</actor>
+				</textFrag>
+			</dEntry>
+			<dEntry>
+				<textFrag>
+					<text>Well Jeez... I guess now that the flag works!</text>
+					<actor>Orbos</actor>
+				</textFrag>
+				<textFrag>
+					<text>I'm just gunna loop this now</text>
+					<actor>Orbos</actor>
 				</textFrag>
 			</dEntry>
 		</dPack>
