@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enu : MonoBehaviour
+public class enu
 {
-    public int CHAR(string Character)
+    public static int CHAR(string Character)
     {
         var Val = -1;
         switch (Character)

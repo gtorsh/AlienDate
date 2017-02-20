@@ -27,3 +27,59 @@ public class DialogueContainer
         }
     }
 }
+
+public class dContainer
+{
+    [XmlAttribute("char")]
+    public string dChar;
+
+    [XmlElement("dPack")]
+    public List<dPack> dPack;
+}
+
+public class dPack
+{
+    [XmlAttribute("ID")]
+    public int dID;
+
+    [XmlElement("dEntry")]
+    public List<dEntry> entry;
+}
+
+public class dEntry
+{
+    [XmlAttribute("ID")]
+    public int dID;
+
+    [XmlElement("textFrag")]
+    public List<textFrag> textFrag;
+
+    [XmlElement("dChoice")]
+    public List<dChoice> choices;
+
+    [XmlElement("dest")]
+    public int dest;
+}
+
+public class textFrag
+{
+    [XmlElement("text")]
+    public string text;
+
+    [XmlElement("actor")]
+    public string actor;
+
+    [XmlElement("dest")]
+    public int dest;
+}
+
+public class dChoice
+{
+    [XmlElement("text")]
+    public string text;
+
+    [XmlElement("dest")]
+    public int dest;
+}
+
+

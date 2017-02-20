@@ -7,7 +7,6 @@ public class Interact : MonoBehaviour {
 	public TextBoxManager textBox;
 	public bool waitforpress;
     public bool popupTrue;
-    private string tpState;
 
 	// Use this for initialization
 	void Start () 
@@ -60,10 +59,6 @@ public class Interact : MonoBehaviour {
             textBox.Character = gameObject.name;
             if (textBox.isActive == false)
             {
-                if (textBox.Conversation != 0)
-                {
-                    textBox.Conversation = 0;
-                }
                 textBox.EnableTextBox();
             }
         }

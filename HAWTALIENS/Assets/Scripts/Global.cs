@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.EventSystems;
 
 public class Global : MonoBehaviour
 {
@@ -28,6 +29,12 @@ public class Global : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        ///=================================================///
+        ///------------------Cursor Locked------------------///
+        ///=================================================///
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         ///=================================================///
         ///------------------Input from OS------------------///
         ///=================================================///
@@ -82,19 +89,42 @@ public class Global : MonoBehaviour
         print(red);
         print(blue);
         print(yellow);
+        EventSystem.current.GetComponent<StandaloneInputModule>().submitButton = green;
+        EventSystem.current.GetComponent<StandaloneInputModule>().cancelButton = red;
 
-        diaControl = DialogueContainer.Load("Assets/Data/Dialogue.xml");
+        diaControl = DialogueContainer.Load(Application.streamingAssetsPath + "/Dialogue.xml");
+        if (Directory.Exists(Application.dataPath + "/Saves"))
+        {
+            Directory.CreateDirectory(Application.dataPath + "/Saves");
+        }
         if (File.Exists(Application.dataPath + "/Saves/saveFile.xml"))
         {
             progControl = progControl.Load(Application.dataPath + "/Saves/saveFile.xml");
         } else
         {
-            progControl = progControl.Load("Assets/Data/baseSaveFile.xml");
+            progControl = progControl.Load(Application.streamingAssetsPath + "/baseSaveFile.xml");
             progControl.Save();
         }
         playerState = pState.WALK;
+        print(enu.CHAR("DEBORAH"));
     }
 
     // Update is called once per frame
-    void Update() { }
+    void Update()
+    {
+        if (Input.GetButtonDown("exit"))
+        {
+            switch (Cursor.visible)
+            {
+                case true:
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
+                    break;
+                case false:
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    break;
+            }
+        }
+    }
 }

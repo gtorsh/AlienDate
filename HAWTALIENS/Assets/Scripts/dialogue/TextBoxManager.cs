@@ -1,8 +1,5 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using UnityEngine.UI;
-using System.Xml.Serialization;
-using System.IO;
 using System.Collections;
 
 public class TextBoxManager : MonoBehaviour {
@@ -20,25 +17,25 @@ public class TextBoxManager : MonoBehaviour {
     public Text blueChoice;
     public Text yellowChoice;
 
-    public int arc;
+    private int arc;
 	public int Conversation;
 	public string Character;
 
-	public string tLine;
+	private string tLine;
 
-	public int currentLine;
-	public int endAtLine;
-    public int tChar;
+	private int currentLine;
+	private int endAtLine;
+    private int tChar;
     public float letterPause = 0.1f;
 
 	public Movement player;
 
 	public bool isActive;
 
-    public bool isWaiting = false;
-    public bool firstPass;
-    public int hasChoices = 0;
-    public bool showChoices = false;
+    private bool isWaiting = false;
+    private bool firstPass;
+    private int hasChoices = 0;
+    private bool showChoices = false;
 
 		// Use this for initialization
 	void Start () 
@@ -147,18 +144,7 @@ public class TextBoxManager : MonoBehaviour {
 	public void EnableTextBox() 
 	{
         var chara = Character.ToUpper();
-        tChar = -1;
-        switch (chara)
-        {
-            case "DEBORAH":
-                tChar = 0;
-                break;
-            case "ORBOS":
-                tChar = 1;
-                break;
-            default:
-                break;
-        }
+        tChar = enu.CHAR(chara);
         arc = Global.progControl.character[tChar].arc;
         Conversation = Global.progControl.character[tChar].conversation;
         textBox.SetActive (true);
