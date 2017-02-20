@@ -24,10 +24,6 @@ public class progControl
         if (!Directory.Exists(Application.dataPath + "/Saves")){
             Directory.CreateDirectory(Application.dataPath + "/Saves");
         }
-        if (!File.Exists(Application.dataPath + "/Saves/saveFile.xml"))
-        {
-            File.Create(Application.dataPath + "/Saves/saveFile.xml");
-        }
         var serializer = new XmlSerializer(typeof(progControl));
         using (var stream = new FileStream(Application.dataPath + "/Saves/saveFile.xml", FileMode.OpenOrCreate))
         {

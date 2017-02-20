@@ -106,7 +106,6 @@ public class Global : MonoBehaviour
             progControl.Save();
         }
         playerState = pState.WALK;
-        print(enu.CHAR("DEBORAH"));
     }
 
     // Update is called once per frame
