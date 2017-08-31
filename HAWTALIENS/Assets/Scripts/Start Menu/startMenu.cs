@@ -29,7 +29,7 @@ public class startMenu : MonoBehaviour {
             case RuntimePlatform.LinuxPlayer:
             case RuntimePlatform.WindowsPlayer:
             case RuntimePlatform.WindowsEditor:
-                if (Input.GetJoystickNames()[0] != "")
+                if (Input.GetJoystickNames().Length != 0)
                 {
                     green = "PCgreen";
                     red = "PCred";
