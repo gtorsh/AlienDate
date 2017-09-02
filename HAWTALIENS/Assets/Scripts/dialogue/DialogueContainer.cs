@@ -74,6 +74,9 @@ public class textFrag
 
     [XmlElement("flag")]
     public List<dFlag> flag;
+
+    [XmlElement("effect")]
+    public List<dEffect> effect;
 }
 
 public class dChoice
@@ -98,4 +101,10 @@ public class dFlag
 
     [XmlAttribute("VAL")]
     public int value;
+}
+
+public class dEffect
+{
+    [XmlAttribute("TYPE")]
+    public string type;
 }

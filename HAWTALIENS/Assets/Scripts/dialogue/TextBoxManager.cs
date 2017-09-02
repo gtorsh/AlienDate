@@ -216,6 +216,7 @@ public class TextBoxManager : MonoBehaviour {
         }
     }
 
+    //Called when there is no choices to be made. Disables the choices and the display
     public void DisableChoices()
     {
         showChoices = false;
@@ -225,6 +226,7 @@ public class TextBoxManager : MonoBehaviour {
         yChoice.SetActive(false);
     }
 
+    //Reloads the text
 	public void ReloadScript() 
 	{
 		if (theText.text !=null) 
@@ -232,6 +234,8 @@ public class TextBoxManager : MonoBehaviour {
             theText.text = null;
         }
 	}
+
+    //Updates the text so there is no overlap
     public void updateText()
     {
         tLine = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].text;
@@ -239,6 +243,7 @@ public class TextBoxManager : MonoBehaviour {
         StartCoroutine(TypeText());
     }
 
+    //Called when a conversation starts, or when it changes
 	public void loadConversation(string character)
 	{
         if (Conversation == -1)
@@ -254,7 +259,8 @@ public class TextBoxManager : MonoBehaviour {
         ReloadScript();
         updateText();
     }
-
+    
+    //The text thing
     IEnumerator TypeText()
     {
         while (isWaiting)
@@ -279,6 +285,8 @@ public class TextBoxManager : MonoBehaviour {
         }
     }
 
+
+    //Sets the flag in question...
     public void setFlag()
     {
         for (int i = 0; i < Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].flag.Count; i++)
