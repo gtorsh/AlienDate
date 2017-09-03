@@ -13,6 +13,8 @@ public class door : MonoBehaviour {
 
     public float timer;
 
+    public string room;
+
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
@@ -33,6 +35,7 @@ public class door : MonoBehaviour {
     {
         if (other.gameObject.tag == "Darrell")
         {
+            print("Got in");
             if (timer > 0 && timer < 3 && animOpen == false)
             {
                 StopAllCoroutines();
@@ -73,8 +76,12 @@ public class door : MonoBehaviour {
         }
     }
 
-    IEnumerator waitForAnimation()
+    public IEnumerator waitForAnimation()
     {
+        if (animOpen == false)
+        {
+            yield break;
+        }
         do
         {
             yield return null;

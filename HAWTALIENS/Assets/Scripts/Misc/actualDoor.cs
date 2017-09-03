@@ -17,6 +17,9 @@ public class actualDoor : MonoBehaviour {
     public float yDest;
     public float zDest;
 
+    public bool destAxisLockY;
+    public bool destAxisLockX;
+
     // Use this for initialization
     void Start () {
         _camera = GameObject.Find("Main Camera");
@@ -43,11 +46,24 @@ public class actualDoor : MonoBehaviour {
     IEnumerator fadeOut()
     {
         animator.SetBool("Fade", true);
-        otherDoor.timer = 3.0f;
-        otherDoor.animOpen = false;
-        otherDoor.anim.SetBool("opened", otherDoor.animOpen);
         otherDoor.anim.speed = 10;
+        otherDoor.StartCoroutine(otherDoor.waitForAnimation());
         yield return new WaitUntil(() => image.color.a == 1);
+        Darrell.gameObject.GetComponent<Movement>().roomName = otherDoor.room;
+        _camera.gameObject.GetComponent<CameraMovement>().roomName = otherDoor.room;
+        if (destAxisLockX && destAxisLockY)
+        {
+            _camera.gameObject.GetComponent<CameraMovement>().axisLocked = 2;
+        }
+        else if (destAxisLockX)
+        {
+            _camera.gameObject.GetComponent<CameraMovement>().axisLocked = 1;
+        }
+        else if (destAxisLockY)
+        {
+            _camera.gameObject.GetComponent<CameraMovement>().axisLocked = 0;
+        }
+        _camera.gameObject.GetComponent<CameraMovement>().updatePos();
         Darrell.gameObject.transform.position = new Vector3(xDest, yDest, zDest);
         _camera.gameObject.transform.position = new Vector3(xDest, yDest, -50);
         animator.SetBool("Fade", false);

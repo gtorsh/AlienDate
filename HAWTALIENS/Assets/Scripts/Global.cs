@@ -54,7 +54,6 @@ public class Global : MonoBehaviour
                 }
                 else
                 {
-                    print("I don't know what's wrong");
                     green = "Kgreen";
                     red = "Kred";
                     blue = "Kblue";

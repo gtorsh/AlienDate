@@ -8,6 +8,8 @@ TagManager:
   - Deborah
   - TextImporter
   - Door_Hallway
+  - Room_Intro
+  - Room_Hallway
   layers:
   - Default
   - TransparentFX
