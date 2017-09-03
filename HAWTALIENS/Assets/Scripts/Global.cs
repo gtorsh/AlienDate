@@ -63,7 +63,7 @@ public class Global : MonoBehaviour
                 break;
             case RuntimePlatform.OSXPlayer:
             case RuntimePlatform.OSXEditor:
-                print(Input.GetJoystickNames().Length);
+                //print(Input.GetJoystickNames().Length);
                 if (Input.GetJoystickNames().Length != 0)
                 {
                     green = "OSXgreen";
@@ -84,11 +84,13 @@ public class Global : MonoBehaviour
             default:
                 break;
         }
+        /*
         print(Application.platform);
         print(green);
         print(red);
         print(blue);
         print(yellow);
+        */
         EventSystem.current.GetComponent<StandaloneInputModule>().submitButton = green;
         EventSystem.current.GetComponent<StandaloneInputModule>().cancelButton = red;
 

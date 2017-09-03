@@ -25,10 +25,6 @@ public class door : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Door_Close"))
-        {
-            print("The Door is opening");
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -55,7 +51,6 @@ public class door : MonoBehaviour {
             if (animOpen == false)
             {
                 timer = 3.0f;
-                print("fired");
                 lastRoutine = StartCoroutine(countDown());
             }
         }
