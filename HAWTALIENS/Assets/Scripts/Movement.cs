@@ -16,6 +16,8 @@ public class Movement : MonoBehaviour {
 
     public GameObject pMenu;
 
+    public string roomName;
+
 
 	void Start () {
 		anim = GetComponent<Animator> ();

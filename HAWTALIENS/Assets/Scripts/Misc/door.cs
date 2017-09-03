@@ -7,14 +7,16 @@ public class door : MonoBehaviour {
     private Animator anim;
     public bool doorOpened;
     public float timer;
-    public Coroutine lastRoutine;
-    public bool animTimer;
+    private Coroutine lastRoutine;
+    private bool animTimer;
+    private bool animOpen;
 
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
         timer = 3.0f;
         doorOpened = false;
+        animOpen = anim.GetBool("opened");
     }
 	
 	// Update is called once per frame
@@ -29,15 +31,13 @@ public class door : MonoBehaviour {
     {
         if (other.gameObject.tag == "Darrell")
         {
-            if (timer > 0 && timer < 3 && doorOpened == true)
+            if (timer > 0 && timer < 3 && animOpen == false)
             {
                 StopAllCoroutines();
                 timer = 3.0f;
             } else
             {
-                timer = 3;
-                doorOpened = true;
-                anim.Play("Door_Open");
+                StartCoroutine(waitForAnimation());
             }
         }
     }
@@ -47,7 +47,7 @@ public class door : MonoBehaviour {
     {
         if (other.gameObject.tag == "Darrell")
         {
-            if (doorOpened == true)
+            if (animOpen == false)
             {
                 timer = 3.0f;
                 print("fired");
@@ -65,8 +65,20 @@ public class door : MonoBehaviour {
         }
         if (timer <= 0)
         {
-            doorOpened = false;
-            anim.Play("Door_Close");
+            animOpen = true;
+            anim.SetBool("opened", animOpen);
+            //anim.Play("Door_Close");
         }
+    }
+
+    IEnumerator waitForAnimation()
+    {
+        do
+        {
+            yield return null;
+        } while (doorOpened == true);
+        timer = 3;
+        animOpen = false;
+        anim.SetBool("opened", animOpen);
     }
 }
