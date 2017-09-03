@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class door : MonoBehaviour {
 
-    private Animator anim;
-    public bool doorOpened;
-    public float timer;
+    public Animator anim;
     private Coroutine lastRoutine;
+
+    public bool doorOpened;
     private bool animTimer;
-    private bool animOpen;
+    public bool animOpen;
+
+    public float timer;
 
     // Use this for initialization
     void Start () {
