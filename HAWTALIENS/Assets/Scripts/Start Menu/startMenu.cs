@@ -81,7 +81,8 @@ public class startMenu : MonoBehaviour {
 	
 	public void startPress()
     {
-        SceneManager.LoadScene("Test");
+        print("fired");
+        SceneManager.LoadScene("Intro_Test");
     }
 
     public void exitPress()
