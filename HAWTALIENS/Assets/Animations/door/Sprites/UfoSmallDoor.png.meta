@@ -1,0 +1,1298 @@
+fileFormatVersion: 2
+guid: 073db5645eade6c4e8db810315fd4fad
+timeCreated: 1504391033
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: UfoSmallDoor 0
+    21300002: UfoSmallDoor 1
+    21300004: UfoSmallDoor 2
+    21300006: UfoSmallDoor 3
+    21300008: UfoSmallDoor 4
+    21300010: UfoSmallDoor 5
+    21300012: UfoSmallDoor 6
+    21300014: UfoSmallDoor 7
+    21300016: UfoSmallDoor 8
+    21300018: UfoSmallDoor 9
+    21300020: UfoSmallDoor 10
+    21300022: UfoSmallDoor 11
+    21300024: UfoSmallDoor 12
+    21300026: UfoSmallDoor 13
+    21300028: UfoSmallDoor 14
+    21300030: UfoSmallDoor 15
+    21300032: UfoSmallDoor 16
+    21300034: UfoSmallDoor 17
+    21300036: UfoSmallDoor 18
+    21300038: UfoSmallDoor 19
+    21300040: UfoSmallDoor 20
+    21300042: UfoSmallDoor 21
+    21300044: UfoSmallDoor 22
+    21300046: UfoSmallDoor 23
+    21300048: UfoSmallDoor 24
+    21300050: UfoSmallDoor 25
+    21300052: UfoSmallDoor 26
+    21300054: UfoSmallDoor 27
+    21300056: UfoSmallDoor 28
+    21300058: UfoSmallDoor 29
+    21300060: UfoSmallDoor 30
+    21300062: UfoSmallDoor 31
+    21300064: UfoSmallDoor 32
+    21300066: UfoSmallDoor 33
+    21300068: UfoSmallDoor 34
+    21300070: UfoSmallDoor 35
+    21300072: UfoSmallDoor 36
+    21300074: UfoSmallDoor 37
+    21300076: UfoSmallDoor 38
+    21300078: UfoSmallDoor 39
+    21300080: UfoSmallDoor 40
+    21300082: UfoSmallDoor 41
+    21300084: UfoSmallDoor 42
+    21300086: UfoSmallDoor 43
+    21300088: UfoSmallDoor 44
+    21300090: UfoSmallDoor 45
+    21300092: UfoSmallDoor 46
+    21300094: UfoSmallDoor 47
+    21300096: UfoSmallDoor 48
+    21300098: UfoSmallDoor 49
+    21300100: UfoSmallDoor 50
+    21300102: UfoSmallDoor 51
+    21300104: UfoSmallDoor 52
+    21300106: UfoSmallDoor 53
+    21300108: UfoSmallDoor 54
+    21300110: UfoSmallDoor 55
+    21300112: UfoSmallDoor 56
+    21300114: UfoSmallDoor 57
+    21300116: UfoSmallDoor 58
+    21300118: UfoSmallDoor 59
+    21300120: UfoSmallDoor 60
+    21300122: UfoSmallDoor 61
+    21300124: UfoSmallDoor 62
+    21300126: UfoSmallDoor 63
+    21300128: UfoSmallDoor 64
+    21300130: UfoSmallDoor 65
+    21300132: UfoSmallDoor 66
+    21300134: UfoSmallDoor 67
+    21300136: UfoSmallDoor 68
+    21300138: UfoSmallDoor 69
+    21300140: UfoSmallDoor 70
+    21300142: UfoSmallDoor 71
+    21300144: UfoSmallDoor 72
+    21300146: UfoSmallDoor 73
+    21300148: UfoSmallDoor 74
+    21300150: UfoSmallDoor 75
+    21300152: UfoSmallDoor 76
+    21300154: UfoSmallDoor 77
+    21300156: UfoSmallDoor 78
+    21300158: UfoSmallDoor 79
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 10
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 512
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 512
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 512
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UfoSmallDoor 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 3
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 4
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 9
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 10
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 11
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 12
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 13
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 14
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 15
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 17
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 218
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 19
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 20
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 21
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 22
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 23
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 24
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 25
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 26
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 27
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 28
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 29
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 30
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 31
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 32
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 33
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 34
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 35
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 180
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 37
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 38
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 39
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 40
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 41
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 42
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 43
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 44
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 45
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 46
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 47
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 48
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 49
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 50
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 51
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 52
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 53
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 142
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 55
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 56
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 57
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 58
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 59
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 60
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 61
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 62
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 63
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 64
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 65
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 66
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 67
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 68
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 69
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 70
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 71
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 104
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 73
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 66
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 74
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 66
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 75
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 66
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 76
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 66
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 77
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 66
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 78
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 66
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UfoSmallDoor 79
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 66
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
