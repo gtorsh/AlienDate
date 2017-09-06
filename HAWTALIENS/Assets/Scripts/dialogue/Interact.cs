@@ -1,17 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Interact : MonoBehaviour {
 
 	public GameObject TextImporter;
 	public TextBoxManager textBox;
+
+    public bool selfText;
+    public string text;
+    public string actors;
+    public string selfFlags;
+    public bool canTake;
+
 	public bool waitforpress;
     public bool popupTrue;
 
 	// Use this for initialization
 	void Start () 
 	{
-        //diaControl.Save("Assets/Data/Dialogue.xml");
+        TextImporter = GameObject.FindGameObjectWithTag("TextImporterParent").transform.GetChild(0).gameObject;
+        if (selfText)
+        {
+            if (text == null || text == "")
+            {
+                print("Dude, You left selfText on!");
+            }
+        }
 	}
 
     // Update is called once per frame
@@ -56,7 +71,24 @@ public class Interact : MonoBehaviour {
             Global.playerState = Global.pState.TALK;
             TextImporter.SetActive(true);
             textBox = FindObjectOfType<TextBoxManager>();
-            textBox.Character = gameObject.name;
+            if (!selfText)
+            {
+                textBox.Character = gameObject.name;
+                textBox.selfText = false;
+                textBox.selfTextBulk = "";
+                textBox.selfTextActorBulk = "";
+                textBox.selfTextFunction();
+                textBox.canTake = false;
+            }
+            else
+            {
+                textBox.Character = gameObject.name;
+                textBox.selfText = true;
+                textBox.selfTextBulk = text;
+                textBox.selfTextActorBulk = actors;
+                textBox.selfTextFunction();
+                textBox.canTake = canTake;
+            }
             if (textBox.isActive == false)
             {
                 textBox.EnableTextBox();

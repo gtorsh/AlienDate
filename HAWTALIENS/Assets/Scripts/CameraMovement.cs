@@ -64,7 +64,6 @@ public class CameraMovement : MonoBehaviour {
         
         //calculates the size of the camera as well as the room and a
         spriteBounds = room.gameObject.GetComponent<SpriteRenderer>();
-        print(gameObject.GetComponent<Camera>().orthographic);
         vertExtent = gameObject.GetComponent<Camera>().orthographicSize;
         horzExtent = vertExtent * Screen.width / Screen.height;
         minX = (float)((spriteBounds.bounds.min.x + horzExtent) - padding);

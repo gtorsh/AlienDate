@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class TextBoxManager : MonoBehaviour {
 
@@ -17,6 +18,15 @@ public class TextBoxManager : MonoBehaviour {
     public Text blueChoice;
     public Text yellowChoice;
 
+    public bool selfText;
+    public string selfTextBulk;
+    private string[] selfTextLines;
+    public string selfTextActorBulk;
+    private string[] selfTextActors;
+    public string selfTextFlagBulk;
+    private string[] selfTextFlags;
+    public bool canTake;
+
     private int arc;
 	public int Conversation;
 	public string Character;
@@ -26,7 +36,7 @@ public class TextBoxManager : MonoBehaviour {
 	private int currentLine;
 	private int endAtLine;
     private int tChar;
-    public float letterPause = 0.1f;
+    private float letterPause = 0.1f;
 
 	public Movement player;
 
@@ -51,9 +61,8 @@ public class TextBoxManager : MonoBehaviour {
         ///}
 	}
 
-
-	// Update is called once per frame
-	void Update () 
+    // Update is called once per frame
+    void Update () 
 	{
         if (Global.playerState != Global.pState.TALK)
         {
@@ -69,19 +78,35 @@ public class TextBoxManager : MonoBehaviour {
                 }
                 if (Input.GetButtonDown(Global.green))
                 {
-                    if (Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].flag.Count != 0)
+                    if (!selfText)
                     {
-                        setFlag();
+                        if (Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].flag.Count != 0)
+                        {
+                            setFlag();
+                        }
                     }
                     if (currentLine == endAtLine && !isWaiting && hasChoices == 0)
                     {
-                        if (Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].dest != 0)
+                        if (!selfText)
                         {
-                            Conversation = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].dest;
-                            loadConversation(Character);
-                        }
-                        else
+                            if (Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].dest != 0)
+                            {
+                                Conversation = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].dest;
+                                loadConversation(Character);
+                            }
+                            else
+                            {
+                                DisableTextBox();
+                            }
+                        } else
                         {
+                            if (canTake)
+                            {
+                                Inventory globalInv = GameObject.Find("Global").GetComponent<Inventory>();
+                                globalInv.addtoInventory(Character);
+                                GameObject item = GameObject.Find(Character);
+                                item.SetActive(false);
+                            }
                             DisableTextBox();
                         }
                     }
@@ -151,10 +176,13 @@ public class TextBoxManager : MonoBehaviour {
 
 	public void EnableTextBox() 
 	{
-        var chara = Character.ToUpper();
-        tChar = enu.CHAR(chara);
-        arc = Global.progControl.character[tChar].arc;
-        Conversation = Global.progControl.character[tChar].conversation;
+        if (!selfText)
+        {
+            var chara = Character.ToUpper();
+            tChar = enu.CHAR(chara);
+            arc = Global.progControl.character[tChar].arc;
+            Conversation = Global.progControl.character[tChar].conversation;
+        }
         textBox.SetActive (true);
         firstPass = true;
         player.canMove = false;
@@ -164,14 +192,18 @@ public class TextBoxManager : MonoBehaviour {
 
 	public void DisableTextBox() 
 	{
-        if (Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].dest != 0)
+        if (!selfText)
         {
-            Global.progControl.character[tChar].conversation = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].dest;
-        } else
-        {
-            Global.progControl.character[tChar].conversation = Conversation;
+            if (Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].dest != 0)
+            {
+                Global.progControl.character[tChar].conversation = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].dest;
+            }
+            else
+            {
+                Global.progControl.character[tChar].conversation = Conversation;
+            }
         }
-        print(Global.progControl.character[tChar].conversation);
+        //print(Global.progControl.character[tChar].conversation);
         Global.playerState = Global.pState.WALK;
         textBox.SetActive (false);
 		player.canMove = true;
@@ -238,8 +270,15 @@ public class TextBoxManager : MonoBehaviour {
     //Updates the text so there is no overlap
     public void updateText()
     {
-        tLine = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].text;
-        theActor.text = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].actor;
+        if (!selfText)
+        {
+            tLine = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].text;
+            theActor.text = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag[currentLine].actor;
+        } else
+        {
+            tLine = selfTextLines[currentLine];
+            theActor.text = selfTextActors[currentLine];
+        }
         StartCoroutine(TypeText());
     }
 
@@ -252,10 +291,17 @@ public class TextBoxManager : MonoBehaviour {
             DisableTextBox();
             return;
         }
-        endAtLine = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag.Count - 1;
+        if (!selfText)
+        {
+            endAtLine = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].textFrag.Count - 1;
+            hasChoices = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].choices.Count;
+        } else
+        {
+            endAtLine = selfTextLines.Length - 1;
+            hasChoices = 0;
+        }
         currentLine = 0;
         isWaiting = true;
-        hasChoices = Global.diaControl.dContainers[tChar].dPack[arc].entry[Conversation].choices.Count;
         ReloadScript();
         updateText();
     }
@@ -307,6 +353,21 @@ public class TextBoxManager : MonoBehaviour {
                 default:
                     print("The Flag didn't work");
                     break;
+            }
+        }
+    }
+
+    public void selfTextFunction()
+    {
+        if (selfText)
+        {
+            selfTextLines = selfTextBulk.Split('|');
+            if (selfTextActorBulk == "" || selfTextActorBulk == null)
+            {
+                Array.Resize(ref selfTextActors, selfTextLines.Length);
+            } else
+            {
+                selfTextActors = selfTextActorBulk.Split('|');
             }
         }
     }

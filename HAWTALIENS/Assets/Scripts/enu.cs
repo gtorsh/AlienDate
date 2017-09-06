@@ -15,6 +15,15 @@ public class enu
             case "ORBOS":
                 Val = 1;
                 break;
+            case "LUCATROTH":
+                Val = 2;
+                break;
+            case "COACH":
+                Val = 3;
+                break;
+            case "JELLY ROOM":
+                Val = 4;
+                break;
             default:
                 break;
         }
